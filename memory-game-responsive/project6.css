@@ -93,6 +93,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: min(90vw, 600px); /* Responsive width */
+    max-height: 90vh;
+    overflow-y: auto;
     background: #fff;
     border: 5px solid #333;
     border-radius: 10px;
@@ -103,10 +105,26 @@
 
 /* 🃏 Game Grid */
 .grid {
-    display: grid;
+  display: grid;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 901px) {
+  .grid {
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
+  }
 }
 
 /* 🔘 Buttons */
