@@ -217,7 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startButton.addEventListener("click", () => {
       gameContainer.style.width = "min(80vw, 600px)"; /* Expand Game */
-      gameContainer.style.top = "calc(50% + 20px)"; /* Move Down */
+      gameContainer.style.height = "min(80vh, 600px)"; /* Expand Game */
+      gameContainer.style.top = "50%"
       gameGrid.style.display = "grid"; /* Show Grid */
       generateFruitBorder(); /* Adjust Border */
   });
